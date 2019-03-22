@@ -5,6 +5,6 @@
 	<title>Document</title>
 </head>
 <body>
-	<?php header("Location: views/inventory/inventory.php"); ?>
+	<?php header("Location: views/sells/sells.php"); ?>
 </body>
 </html>

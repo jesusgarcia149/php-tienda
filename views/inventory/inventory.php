@@ -10,6 +10,12 @@
 	<link rel="stylesheet" type="text/css" href="./../../css/style.css">
 </head>
 <body>
+	<header>
+		<a href="./../sells/sells.php">Ventas</a>
+		<a href="./../clients/clients.php">clientes</a>
+		<a href="#">Inventario</a>
+		<a href="search.php">Buscar Producto</a>
+	</header>
 	<?php
 		include __DIR__ . '/create.php';
 		include __DIR__ . '/read.php';

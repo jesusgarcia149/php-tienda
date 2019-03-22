@@ -13,7 +13,7 @@
 		$name = htmlentities($name);
 		$units = htmlentities($units);
 		$price = htmlentities($price);
-
+		
 		// Almacenar la consulta en una variable para su posterior ejecución
 		$queryCreate = "INSERT INTO `productos` (`id`, `nombre`, `cantidad`, `precio`) VALUES (NULL,'$name','$units','$price')";
 		
@@ -21,15 +21,12 @@
 		mysqli_query($conn, $queryCreate);
 		
 		// Volvemos al lugar donde estábamos
-		header("Location: ./../inventario.php");
+		header("Location: ./inventory.php");
 	}
 
 ?>
 
 <div class="div-create fc--white">
-	<a href="search.php">
-		<h1 class="group-button--submit">Buscar Producto</h1>
-	</a>
 	<h1 class="bc--base-d30">Crear Producto</h1>
 	<form action="create.php" method="POST" clsas="form">
 		<div class="form--campos">

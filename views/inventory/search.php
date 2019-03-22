@@ -15,12 +15,13 @@
 	<link rel="stylesheet" type="text/css" href="./../../css/style.css">
 </head>
 <body>
-	<div class="div-create fc--white">
 	<header>
-		<a href="./../inventory/inventory.php">
-			<h1 class="group-button--submit">Inventario</h1>
-		</a>
+		<a href="./../sells/sells.php">Ventas</a>
+		<a href="./../clients/clients.php">clientes</a>
+		<a href="./../inventory/inventory.php">Inventario</a>
+		<a href="./../inventory/search.php">Buscar Producto</a>
 	</header>
+	<div class="div-create fc--white">
 		<h1 class="bc--base-d30">Buscar Producto</h1>
 		<form action="search.php" method="POST" clsas="form">
 			<div class="form--campos">
