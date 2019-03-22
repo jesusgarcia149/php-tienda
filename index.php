@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Sistema de Inventario</title>
+	<title>Document</title>
 </head>
 <body>
-	<?php include('create.php'); ?>
-	<?php include('read.php'); ?>
+	<?php header("Location: views/inventory/inventory.php"); ?>
 </body>
 </html>
