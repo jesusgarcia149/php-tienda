@@ -10,8 +10,9 @@
 	<header>
 		<a href="#">Ventas</a>
 		<a href="./../clients/clients.php">clientes</a>
-		<a href="./../inventory/inventory.php">Inventario</a>
-		<a href="./../inventory/search.php">Buscar Producto</a>
+		<a href="./../clients/search.php">Buscar Cliente</a>
+		<a href="./../products/products.php">Productos</a>
+		<a href="./../products/search.php">Buscar Producto</a>
 	</header>
 	<h1>Ventas</h1>
 </body>
