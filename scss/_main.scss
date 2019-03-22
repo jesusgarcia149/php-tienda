@@ -1,0 +1,88 @@
+.datos {
+  margin: 0 auto;
+  width: 100%;
+  border: 1px solid;
+  border-collapse: collapse;
+
+  // Establece las reglas CSS en la cabecera de la tabla
+  &--cabecera {
+    background-color: darken($color-base, 10);
+    color: white;
+
+    th {
+      border: 1px solid white;
+      height: 40px;
+      padding: 0 10px;
+      font-variant: small-caps;
+    }
+  }
+
+  // Establece las reglas CSS en el cuerpo de la tabla
+  &--cuerpo {
+    background-color: lighten($color-base, 45);
+    color:darken($color-base, 20);
+    
+    tr {
+
+      &:nth-of-type(2n+1) {
+        background-color: rgba(white, 0.3);
+      }
+    }
+    td {
+      height: 35px;
+      padding: 0 10px;
+      border: 1px solid white;
+    }
+  }
+
+  // Selecciona los enlaces de la tabla que lo contienen 
+  // si utilizan la siguiente clase
+  &--link {
+    color: darken($color-base, 5);
+    font: {
+      variant: small-caps;
+    }
+
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+.div {
+
+  &-create {
+    position: reltive;
+    margin: 0 auto;
+    // Título 
+    h1 {
+      margin: 0;
+      padding: 0 10px;
+      height: 40px;
+
+      // Colores
+      // background-color: rgba(white, 0.3);
+      font: {
+        variant: small-caps;
+        size: 1.5rem;
+      }
+
+      // Cajas flexibles
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &-read {
+    position: relative;
+    margin: 0 auto;
+    padding: 20px;
+
+    h1 {
+      margin: 0;
+      font-variant: small-caps;
+      font-size: 1.5rem;
+    }
+  }
+}

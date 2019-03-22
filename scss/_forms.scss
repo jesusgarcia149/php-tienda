@@ -1,0 +1,96 @@
+// Formularios
+.form {
+  
+  // Contenedor de campos de formulario
+  &--campos {
+    position: relative;
+    margin: 0 auto;
+    
+    // Cajas flexibles
+    display: flex;
+    align-items: center;
+    
+    // Proporciones
+    height: 60px;
+    
+    // Colores
+    background-color: darken($color-base, 25);
+  }
+
+  // Selecciona todas las etiquetas (label) del formulario
+  &--item {
+    --height: 33px;
+
+    padding: 0 10px;
+
+    span {
+      font: {
+        variant: small-caps;
+        size: 0.9rem;
+      }
+      padding-right: 6px; 
+    }
+
+    // Cajas de texto y otras cajas de entrada de datos
+    [type="text"],
+    [type="number"] {
+      outline: medium none;
+      height: var(--height);
+      border: 1px solid;
+      border-radius: calc(var(--height) / 2);
+      padding: 0 10px;
+      
+      // colores
+      background-image: none;
+      background-color: transparent;
+      color: white;
+      
+      border: 1px solid rgba(white, 0.2);
+      
+      // Transiciones
+      transition: 300ms ease;
+      
+      // Foco sobre las cajas de texto
+      &:focus {
+        box-shadow: inset 0 0 5px rgba(white, 0.1);
+        background-color: rgba(black, 0.2);
+        
+      }
+
+      // Precio
+      &.precio {
+        width: 150px;
+      }
+
+      // Cantidad
+      &.cantidad {
+        width: 100px;
+      }
+    }
+  }
+}
+
+// Grupo de botones
+.group-button {
+  --height: 33px;
+
+  &--submit {
+    background-image: linear-gradient(0deg, rgba(black, 0.2), transparent);
+    background-image: none;
+    background-color: darken($color-base, 5);
+    color: white;
+    height: var(--height);
+    border-radius: calc(var(--height) / 2);
+    border: 0;
+    padding: 0 var(--height);
+    transition: 300ms ease;
+    
+    &:hover {
+      background-color: darken($color-base, 9);
+    }
+    
+    &:active {
+      background-color: darken($color-base, 9);
+    }
+  }
+}

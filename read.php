@@ -1,44 +1,43 @@
 <?php
 	include('connection.php');
 	$queryRead = "SELECT * FROM productos";
-	$listProducts = mysqli_query($conn,$queryRead);
+	$listProducts = mysqli_query($conn, $queryRead);
 ?>
 <div class="div-read">
-	<h1>Productos Registrados</h1>
-	<table>
-		<thead>
+	<h1 class="fc--base-d30">Productos Registrados</h1>
+
+	<?php
+	$tbody = "";
+		
+	while ($registro = mysqli_fetch_array($listProducts)) {
+		$tbody .= "
+		<tr>
+			<td>$registro[id]</td>
+			<td>$registro[nombre]</td>
+			<td>$registro[cantidad]</td>
+			<td>$registro[precio]</td>
+			<td><a class=\"datos--link\" href=\"update.php?idGetUpdate=$registro[id]&nombreGetUpdate=$registro[nombre]&cantidadGetUpdate=$registro[cantidad]&precioGetUpdate=$registro[precio]\">Editar</a></td>
+			<td><a class=\"datos--link\" href=\"delete.php?idGetDelete=$registro[id]\">Eliminar</a></td>
+		</tr>
+		";
+	}
+	?>
+
+	<!-- Tablas -->
+	<table class="datos">
+		<thead class="datos--cabecera">
 			<tr>
-				<td><b>id</b></td>
-				<td><b>nombre</b></td>
-				<td><b>cantidad</b></td>
-				<td><b>precio</b></td>
-				<td><b>acciones</b></td>
+				<th>ID</th>
+				<th>Nombre</th>
+				<th>Cantidad</th>
+				<th>Precio</th>
+				<th colspan="2">Acciones</th>
 			</tr>
 		</thead>
-		<tbody>	
-			<?php 
-				while ($row = mysqli_fetch_array($listProducts)) {
-					echo "
-								<tr>
-									<td>$row[0]</td>
-								  <td>$row[1]</td>
-								  <td>$row[2]</td>
-								  <td>$row[3]</td>
-								  <td>
-								  	<a href='update.php?idGetUpdate=$row[0]
-											&nombreGetUpdate=$row[1]
-											&cantidadGetUpdate=$row[2]
-											&precioGetUpdate=$row[3]'
-								 		>editar
-								 		</a>
-							 	  </td>
-							 	  <td>
-										<a href='delete.php?idGetDelete=$row[0]'>borrar</a>
-							 	  </td>
-						 	  </tr>
-					 	  	";
-				}
-			?>
+
+		<tbody class="datos--cuerpo">
+			<?php echo $tbody; ?>
 		</tbody>
 	</table>
+
 </div>

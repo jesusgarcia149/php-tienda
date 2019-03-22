@@ -1,0 +1,31 @@
+::-moz-focus-inner {
+  border: 0;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+
+  font: {
+    family: "Open Sans", sans-serif, arial;
+    size: 1rem;
+  }
+}
+
+body {
+  height: 100vh;
+}
+
+* {
+  $box-sizing: border-box;
+
+  -webkit-box-sizing: $box-sizing;
+  -moz-box-sizing: $box-sizing;
+  box-sizing: $box-sizing;
+
+  &::before, &::after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+  }
+}

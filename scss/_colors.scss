@@ -1,0 +1,53 @@
+// Color frontal
+.fc {
+  &--base {
+    color: $color-base;
+  }
+
+  &--blanco,
+  &--white {
+    color: white;
+  }
+
+  @for $indice from 1 through 20 {
+    $valor: $indice * 5;
+
+    &--gray-#{$valor} {
+      color: darken(white, $valor);
+    }
+
+    // Tonalidades del color base
+    @if $valor <= 45 {
+      &--base-d#{$valor} {
+        color: darken($color-base, $valor);
+      }
+    }
+  }
+}
+
+// Color fondo
+.bc {
+  &--base {
+    background-color: $color-base;
+  }
+
+  &--blanco,
+  &--white {
+    background-color: white;
+  }
+
+  @for $indice from 1 through 20 {
+    $valor: $indice * 5;
+
+    &--gray-#{$valor} {
+      background-color: darken(white, $valor);
+    }
+
+   // Tonalidades del color base
+   @if $valor <= 45 {
+    &--base-d#{$valor} {
+      background-color: darken($color-base, $valor);
+    }
+    }
+  }
+}

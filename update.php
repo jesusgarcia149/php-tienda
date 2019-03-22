@@ -20,23 +20,41 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<div class="div-update">
+	<div class="div-update div-create bc--base-d20 fc--white form">
 		<h1>Update</h1>
 		<form action="update.php" method="POST">
-			<label for="updateProductId">Id</label>
-			<input type="text" id="updateProductId" name="updateProductId" value="<?php echo $_GET['idGetUpdate'] ?>">
-			<label for="updateProductNombre">Nombre</label>
-			<input type="text" id="updateProductNombre" name="updateProductNombre" 
-			value="<?php echo $_GET['nombreGetUpdate'] ?>">
-			<label for="updateProductCantidad">Cantidad</label>
-			<input type="text" id="updateProductCantidad" name="updateProductCantidad" 
-			value="<?php echo $_GET['cantidadGetUpdate'] ?>">
-			<label for="updateProductPrecio">Precio</label>
-			<input type="text" id="updateProductPrecio" name="updateProductPrecio" 
-			value="<?php echo $_GET['precioGetUpdate'] ?>">
-			<input type="submit">
+
+			<div class="form--campos">
+				<label class="form--item" for="updateProductId">
+					<span>Id</span>
+					<input type="text" id="updateProductId" name="updateProductId" value="<?php echo $_GET['idGetUpdate'] ?>">
+				</label>
+				
+				<label class="form--item" for="updateProductNombre">
+					<span>Nombre</span>
+					<input type="text" id="updateProductNombre" name="updateProductNombre" value="<?php echo $_GET['nombreGetUpdate'] ?>">
+				</label>
+	
+				<label class="form--item" for="updateProductCantidad">
+					<span>Cantidad</span>
+					<input type="text" id="updateProductCantidad" name="updateProductCantidad" value="<?php echo $_GET['cantidadGetUpdate'] ?>">
+				</label>
+	
+				<label class="form--item" for="updateProductPrecio">
+					<span>Precio</span>
+					<input type="text" id="updateProductPrecio" name="updateProductPrecio" 
+					value="<?php echo $_GET['precioGetUpdate'] ?>">
+				</label>
+				
+				<div class="group-button form--item">
+					<button type="submit" class="group-button--submit">Actualidar</button>
+				</div>
+			</div>
+			
 		</form>
 	</div>
 </body>
