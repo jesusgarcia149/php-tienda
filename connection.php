@@ -2,7 +2,7 @@
 	$host = 'localhost';
 	$user = 'root';
 	$pass = '';
-	$ddbb = 'tienda';
+	$ddbb = 'php-tienda';
 
 	$conn = mysqli_connect($host,$user,$pass,$ddbb);
 
